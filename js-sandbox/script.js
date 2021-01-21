@@ -1,11 +1,97 @@
-function findBiggestFraction(a,b) {
-    a > b ? console.log("a: ", a) : console.log("b: ", b);
+// Closure
+function giveMeEms(pixels) {
+    var baseValue = 16;
+
+    function doTheMath() {
+        return pixels / baseValue;
+    }
+
+    return doTheMath;
 }
 
-var a = 3 / 4;
-var b = 5 / 7;
+var smallSize = giveMeEms(12);
+var mediumSize = giveMeEms(18);
+var largeSize = giveMeEms(24);
+var xlargeSize = giveMeEms(32);
 
-findBiggestFraction();
+console.log("Small size: ", smallSize());
+console.log("Medium size: ", mediumSize());
+console.log("Large size: ", largeSize());
+console.log("X large size: ", xlargeSize());
+// function Course(title, instructor, level, published, views) {
+//     this.title = title;
+//     this.instructor = instructor;
+//     this.level = level;
+//     this.published = published;
+//     this.views = views;
+//     this.updateViews = function () {
+//         return ++this.views;
+//     };
+// }
+
+// var courses = [
+//     new Course("The JS essential training", "Morten RH", 1, true, 0),
+//     new Course("Up and running with ECMAScript 6", "Eve", 2, true, 1234)
+// ]
+
+// console.log(courses[1].updateViews()); 
+
+// var course = new Object();
+// var course = {
+//     title: "JS essential training",
+//     instructor: "Morten RH",
+//     level: 1,
+//     published: true,
+//     views: 0,
+//     updateViews: function () {
+//         return ++course.views;
+//     }
+// }
+// console.log(course.views);
+// course.updateViews();
+// console.log(course.views);
+
+// Const and let
+// const MYCONSTANT = 5;
+// console.log(MYCONSTANT);
+// Anomynous function
+// var a = 5 / 7;
+// var b = 18 / 25;
+
+// var theBiggest = function () {
+//     var result;
+//     a > b ? result = ["a", a] : result = ["b: ", b];
+//     console.log(result);
+//     // return result;
+// }
+
+// when calling anomy funct shoud add ()
+//theBiggest();
+//console.log(theBiggest());
+
+// function findBiggestFraction(a, b) {
+//     var result;
+//     a > b ? result = ["firstFraction", a] : result = ["secondFraction", b];
+//     return result;
+// }
+
+// var firstFraction = 3 / 4;
+// var secondFraction = 5 / 7;
+
+// var fractionResult = findBiggestFraction(firstFraction, secondFraction);
+
+// console.log("Frist fraction result: ", firstFraction);
+// console.log("Second fraction result: ", secondFraction);
+// console.log("Fraction " + fractionResult[0] + " wuth a value of " + fractionResult[1] + " is the biggest fraction.");
+
+// function findBiggestFraction(a,b) {
+//     a > b ? console.log("a: ", a) : console.log("b: ", b);
+// }
+
+// var a = 3 / 4;
+// var b = 5 / 7;
+
+// findBiggestFraction(a, b);
 
 
 
