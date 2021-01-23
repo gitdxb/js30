@@ -39,4 +39,6 @@ function reveal(e) {
     ALERT.classList.toggle("hide");
 }
 
-CTABUTTON.onclick = reveal;
+CTABUTTON.addEventListener("click", reveal, false);
+CTABUTTON.addEventListener("click", function () { console.log("The button was clicked!") }, false);
+
