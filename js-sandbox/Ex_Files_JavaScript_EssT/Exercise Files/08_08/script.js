@@ -11,9 +11,9 @@ var timerRunning = false;
 // Add leading zero to numbers 9 or below (purely for aesthetics):
 function leadingZero(time) {
     if (time <= 9) {
-        time = "0" + time;
+            time = "0" + time;
     }
-    return time;
+    return time
 }
 
 // Run a standard minute/second/hundredths timer:
